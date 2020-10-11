@@ -14,3 +14,25 @@ Nota: Ambos procesos deben ejecutarse de forma sincronizada, es decir, primero s
 venta y, una vez ésto se haya ejecutado, se podrá registrar. Además, al finalizar cada venta, se debe
 mostrar una alerta al usuario con el mensaje “Venta procesada”.
 -->
+<template>
+    <h1> Nuevo Componente</h1>
+</template>
+
+<script>
+export default {
+    name: 'component-name',
+    // props: {},
+    data: function(){
+        return {}
+    },
+    // computed: {},
+    methods: {
+        // -- Metodos
+    },
+    // components: {},
+}
+</script>
+
+<style scoped>
+    
+</style>
