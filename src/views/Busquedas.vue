@@ -10,7 +10,11 @@ Nota: Este listado se requiere que sea un componente externo al de la vista de b
 
 -->
 <template>
-    <h1> Nuevo Componente</h1>
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
 </template>
 
 <script>
