@@ -12,7 +12,7 @@ como vendidos.-->
 
 <script>
 export default {
-    name: 'component-name',
+    name: 'Total',
     // props: {},
     data: function(){
         return {}

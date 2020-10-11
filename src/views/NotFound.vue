@@ -2,12 +2,12 @@
 debe mostrar una vista que contenga un mensaje, el cual diga “La página que busca no está
 disponible”, utilizando una etiqueta h1.-->
 <template>
-    <h1> Nuevo Componente</h1>
+    <h1> La página que busca no está disponible</h1>
 </template>
 
 <script>
 export default {
-    name: 'component-name',
+    name: 'NotFound',
     // props: {},
     data: function(){
         return {}

@@ -11,6 +11,20 @@ Nota: Este listado se requiere que sea un componente externo al de la vista de b
 -->
 <template>
     <div>
+        <!--filtro-->
+    <select class="custom-select" id="inputGroupSelect02">
+    <option selected>Choose...</option>
+    <option value="001">One</option>
+    <option value="002">Two</option>
+    <option value="003">Three</option>
+    <option value="004">four</option>
+    <option value="005">005</option>
+    <option value="006">006</option>
+  </select>
+        <!--cantidad de juegos-->
+
+        <!--listado de juegos-->
+        
         <ul>
             <li></li>
         </ul>
@@ -18,13 +32,17 @@ Nota: Este listado se requiere que sea un componente externo al de la vista de b
 </template>
 
 <script>
+import {mapState} from 'vuex'
+
 export default {
-    name: 'component-name',
+    name: 'busquedas',
     // props: {},
     data: function(){
         return {}
     },
-    // computed: {},
+    computed: {
+        ...mapState(['id', 'nombre', 'stock', 'precio', 'color', 'destacado'])
+    },
     methods: {
         // -- Metodos
     },

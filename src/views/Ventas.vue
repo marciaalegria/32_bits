@@ -15,12 +15,16 @@ venta y, una vez ésto se haya ejecutado, se podrá registrar. Además, al final
 mostrar una alerta al usuario con el mensaje “Venta procesada”.
 -->
 <template>
-    <h1> Nuevo Componente</h1>
+<div>
+    <h1>ventas</h1>
+</div>
 </template>
 
 <script>
 export default {
-    name: 'component-name',
+    name: 'Ventas',
+    components: {
+    },
     // props: {},
     data: function(){
         return {}

@@ -5,7 +5,7 @@
     sitio-->
 <template>
   <div class="home">
-    <Navegacion/>
+    
        <h1>{{ titulo }}</h1>
         <h2>{{ subtitulo}}</h2>
   </div>
@@ -14,13 +14,13 @@
 
  <script>
 // @ is an alias to /src
-import Navegacion from '@/components/Navegacion.vue'
+
 
 export default {
   name: 'Home',
-  components: {
-    Navegacion
-  },
+//  components: {
+
+  //},
       data: function(){
         return {
             

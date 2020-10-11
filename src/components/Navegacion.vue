@@ -1,26 +1,30 @@
 <template>
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <br>
 
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio</a>
-      </li>
-      <li class="nav-item active">
-        <router-link to="/busquedas" class="nav-link">Busquedas</router-link>
-      </li>
-      <li class="nav-item">
-        <router-link class="nav-link" to="/ventas">Ventas</router-link>
-      </li>
-     
-      <li class="nav-item">
-        <router-link to="/total" class="nav-link" href="#">Total</router-link>
-      </li>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <router-link class="nav-link" to="/">Inicio</router-link>
+          </li>
+          <li class="nav-item active">
+            <router-link class="nav-link" to="/busquedas" >Busquedas</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/ventas">Ventas</router-link>
+          </li>
+        
+          <li class="nav-item">
+            <router-link to="/total" class="nav-link">Total</router-link>
+          </li>
 
-    <router-view/>
-    </ul>
+        </ul>
+      </div>
+      <br>
+    </nav>
+        <router-view/>
   </div>
-</nav>
 </template>
 
 <script>
