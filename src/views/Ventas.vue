@@ -16,14 +16,17 @@ mostrar una alerta al usuario con el mensaje “Venta procesada”.
 -->
 <template>
 <div>
-    <h1>ventas</h1>
+    <h1>kjgnkvfl</h1>
+    <Listado/>
 </div>
 </template>
 
 <script>
+import Listado from '../components/Listado'
 export default {
     name: 'Ventas',
     components: {
+        Listado
     },
     // props: {},
     data: function(){

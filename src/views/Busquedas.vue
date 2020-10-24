@@ -1,52 +1,62 @@
 <!--Vista de búsqueda de juegos: esta vista constará de 3 secciones:
 Filtro: constará de un cuadro de texto que filtrará por el código de juego el listado de
-juegos (explicado más abajo).
+juegos
 Cantidad de juegos totales: constará de una leyenda que muestre la cantidad de juegos
 totales registrados.
-Listado de juegos: desplegar el listado de juegos con stock, mostrando al usuario los
-campos: código, nombre, stock y precio. Se le solicita además que cada fila listada tenga el
-fondo de color asignado, así como el siguiente:
-Nota: Este listado se requiere que sea un componente externo al de la vista de búsqueda de juegos.
 
 -->
 <template>
     <div>
-        <!--filtro-->
-    <select class="custom-select" id="inputGroupSelect02">
-    <option selected>Choose...</option>
-    <option value="001">One</option>
-    <option value="002">Two</option>
-    <option value="003">Three</option>
-    <option value="004">four</option>
-    <option value="005">005</option>
-    <option value="006">006</option>
-  </select>
-        <!--cantidad de juegos-->
+            <!--filtro-->
+        <div >
+            <label>Seleccione código</label>
+            <input type="text" v-model="search" @change="buscar">
+        </div>
 
-        <!--listado de juegos-->
-        
-        <ul>
-            <li></li>
-        </ul>
+            <!--cantidad de juegos-->
+
+        <div>cantidad de juegos totales registrados = {{ totalProductos }}</div>
+
+            <!--listado de juegos-->
+        <Listado :productos= "resultado" />
+
     </div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import {mapState, mapGetters} from 'vuex'
+import Listado from '../components/Listado'
 
 export default {
-    name: 'busquedas',
-    // props: {},
+    name: 'Busquedas',
+    components: {
+        Listado
+    },
     data: function(){
-        return {}
+        return {
+            search:'',
+            resultado:[]
+        }
+
     },
-    computed: {
-        ...mapState(['id', 'nombre', 'stock', 'precio', 'color', 'destacado'])
-    },
+    computed: { 
+        ...mapState(['productos']),
+        
+        ...mapGetters(['totalProductos', 'productosFiltrados'])
+        },
+        
+
     methods: {
-        // -- Metodos
+        buscar(){
+                
+            this.resultado = this.productosFiltrados(this.search)
+         
+            
+        }
     },
-    // components: {},
+    created(){
+        this.resultado = this.productos
+    }
 }
 </script>
 

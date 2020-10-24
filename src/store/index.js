@@ -69,7 +69,11 @@ export default new Vuex.Store({
     },
     ventasRealizadas: state=>{
       return state.ventas.length;
+    },
+    productosFiltrados: (state)=>(id) =>{
+      return state.productos.filter(producto => producto.id.includes(id))
     }
+    
   },
   modules: {
   }
